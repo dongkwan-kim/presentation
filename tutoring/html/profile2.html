@@ -1,0 +1,41 @@
+<html>
+<head>
+	<title>My website</title>
+	<meta charset="utf8">
+	<style>
+		* {
+			text-align: center;
+		}
+		#comment-list {
+			margin: auto;
+			width: 500px;
+		}
+	</style>
+	<script src="https://code.jquery.com/jquery.min.js"></script>
+</head>
+
+<body>
+	<h1>Profile</h1>
+	<p>My name is <a href="https://www.facebook.com/">익명</a></p>
+	<p>My favorite color is green</p>
+
+
+	<!-- 이미지는 여기 주소를 바꿔주세요 -->
+	<img width="500px" src="https://pixabay.com/static/uploads/photo/2015/10/05/15/37/forest-972792_960_720.jpg" />
+
+
+	<!--
+		여기서부터 작성합니다
+	-->
+    <p id="comment">
+        comment: <input type="text" name="comment">
+	<button id="add-btn">add</button>
+    </p>
+
+    <ul id="comment-list">
+    </ul>
+
+
+
+</body>
+</html>
