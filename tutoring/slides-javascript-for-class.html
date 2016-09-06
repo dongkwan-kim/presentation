@@ -467,7 +467,94 @@ console.log(tests[2]);
                    " y: " + e.pageY);
     });
 });</code></pre></div></div>
-<div class="sl-block" data-block-type="code" style="width: 800px; height: 70px; left: 80px; top: 210px;" data-block-id="02e8f6ad53514ab1b22688d9a32ad4b4"><div class="sl-block-content" style="z-index: 13; font-size: 197%;" data-highlight-theme="obsidian"><pre class="xml"><code>&lt;p&gt;nothing&lt;/p&gt;</code></pre></div></div></section></section><section data-id="6b147b563a48c6f3ad78dfe4d77565f6"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="5a28eba71b722a8064e03563b7c3de78"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text">
+<div class="sl-block" data-block-type="code" style="width: 800px; height: 70px; left: 80px; top: 210px;" data-block-id="02e8f6ad53514ab1b22688d9a32ad4b4"><div class="sl-block-content" style="z-index: 13; font-size: 197%;" data-highlight-theme="obsidian"><pre class="xml"><code>&lt;p&gt;nothing&lt;/p&gt;</code></pre></div></div></section></section><section class="stack" data-id="b7ed8a1516fac219b512ae27e18d01ee"><section data-id="88181048abf3f08cd251aeb6c40ad35d"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="aec5177c2cd9849f6914ab9cf6063bf1"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text">
+<h2>프로필 페이지에 댓글 남기기</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 280px; height: auto;" data-block-id="261e4f7b409461e0aeccd6d61634fc41"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" data-has-line-height="" style="line-height: 1.82;" data-has-custom-html="">
+<ul>
+	<li>이전에 만들어 놓았던 프로필 페이지를 응용합시다</li>
+	<li>
+<a href="http://goo.gl/2V3ZKZ" target="_blank">goo.gl/2V3ZKZ</a>
+	<ul>
+		<li>오른쪽 마우스 &gt; 다른 이름으로 저장</li>
+	</ul>
+	</li>
+</ul>
+</div></div></section><section data-id="42eecd36a8a74bd106ad0ef4f982813f"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="e7d1de2d04a8a7c4cd349e0bd35e05c9"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11;">
+<h2>1. JQuery를 부릅시다</h2>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 800px; height: 420px; left: 80px; top: 210px;" data-block-id="ea5cc58d83391d634e7e574f8978ff6a"><div class="sl-block-content" style="z-index: 12; font-size: 156%;" data-highlight-theme="obsidian"><pre class="xml"><code>&lt;html&gt;
+&lt;head&gt;
+
+&lt;script src="https://code.jquery.com/jquery.min.js"&gt;&lt;/script&gt;
+
+&lt;/head&gt;
+&lt;body&gt;
+    ...
+&lt;/body&gt;
+&lt;/html&gt;</code></pre></div></div></section><section data-id="23ddf4631b133489bf8d50282e53faa9"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="9299c32dd659929a6a3eb6ee3425d8ba"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11;" dir="ui">
+<h2>2. 댓글창을 넣읍시다</h2>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 800px; height: 420px; left: 80px; top: 210px;" data-block-id="11e3e14c1f7027ff3efce6e06e30a3ef"><div class="sl-block-content" style="z-index: 12; font-size: 156%;" data-highlight-theme="obsidian"><pre class="xml"><code>&lt;body&gt;
+    ...
+
+    &lt;p id="comment"&gt;
+        comment: &lt;input type="text" name="comment"&gt;
+	&lt;button id="add-btn"&gt;add&lt;/button&gt;
+    &lt;/p&gt;
+
+    &lt;ul id="comment-list"&gt;
+    &lt;/ul&gt;
+
+&lt;/body&gt;</code></pre></div></div></section><section data-id="83147cfd8cb52a1c09f540f0a717f10d"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="33c563a5e837be0b4d4c05f1bc5c6cfe"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11;" dir="ui">
+<h2>3. Add Click Event</h2>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 800px; height: 420px; left: 80px; top: 210px;" data-block-id="a4f16f4e1352e0c4bbc3a875a21a6922"><div class="sl-block-content" style="z-index: 12; font-size: 156%;" data-highlight-theme="obsidian"><pre class="none"><code>&lt;script&gt;
+
+$(document).ready(function(){
+    $("#add-btn").click(function(){
+        alert("click!")
+    });
+});
+
+&lt;/script&gt;</code></pre></div></div></section><section data-id="480c8b73650d8db16daa680a73f65a40"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="f798912a20540eab02a4962c7b7c6bf3"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11;" dir="ui">
+<h2>4. Get input value</h2>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 800px; height: 420px; left: 80px; top: 210px;" data-block-id="05da1668f7b83b40b2df9139369071a2"><div class="sl-block-content" style="z-index: 12; font-size: 156%;" data-highlight-theme="obsidian"><pre class="none"><code>&lt;script&gt;
+
+$(document).ready(function(){
+    $("#add-btn").click(function(){
+        var comment = $("input").val();
+        alert(comment);
+    });
+});
+
+&lt;/script&gt;</code></pre></div></div></section><section data-id="9938e5624129318244daf27967053c47"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="9ceacc938f1bb39bac0c783de622fe65"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11;" dir="ui">
+<h2>5. Add Comment</h2>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 800px; height: 420px; left: 80px; top: 210px;" data-block-id="8daa3e64cb9a4c0f131b0db7362d569e"><div class="sl-block-content" style="z-index: 12; font-size: 156%;" data-highlight-theme="obsidian"><pre class="none"><code>&lt;script&gt;
+
+$(document).ready(function(){
+    $("#add-btn").click(function(){
+        var comment = "&lt;li&gt;" + $("input").val() + "&lt;/li&gt;";
+        $("#comment-list").append(comment);
+    });
+});
+
+&lt;/script&gt;</code></pre></div></div></section><section data-id="e5d8b003320fb499b3961be1c2d242b2"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="56acaa0061e0d1f99a1fb85a973ca64e"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11;" dir="ui">
+<h2>6. Clear Input</h2>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 800px; height: 420px; left: 80px; top: 210px;" data-block-id="fc862481cb3cf90957d8b5464269a6a7"><div class="sl-block-content" style="z-index: 12; font-size: 156%;" data-highlight-theme="obsidian"><pre class="none"><code>&lt;script&gt;
+
+$(document).ready(function(){
+    $("#add-btn").click(function(){
+        var comment = "&lt;li&gt;" + $("input").val() + "&lt;/li&gt;";
+        $("#comment-list").append(comment);
+        $("input").val("");
+    });
+});
+
+&lt;/script&gt;</code></pre></div></div></section></section><section data-id="6b147b563a48c6f3ad78dfe4d77565f6"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="5a28eba71b722a8064e03563b7c3de78"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text">
 <h2>Codecademy</h2>
 </div></div>
 <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 280px; height: auto;" data-block-id="5ba185528a237a50c25a582bed50d690"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" data-has-line-height="" style="line-height: 1.82;">
